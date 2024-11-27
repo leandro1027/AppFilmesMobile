@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MVVM</string>
+    <string name="e_mail">E-mail\n</string>
+    <string name="password">Senha</string>
+    <string name="login">login</string>
+    <string name="movie_image_desc">Descrição filme 1</string>
+</resources>
