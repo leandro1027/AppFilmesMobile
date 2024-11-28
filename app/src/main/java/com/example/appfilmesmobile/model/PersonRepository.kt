@@ -8,6 +8,6 @@ import androidx.core.view.WindowInsetsCompat
 
 class PersonRepository {
     fun login(email : String, password : String): Boolean{
-        return (email == "leandrobalaban78@gmail.com" && password == "12345")
+        return (email == "teste" && password == "12345")
     }
 }

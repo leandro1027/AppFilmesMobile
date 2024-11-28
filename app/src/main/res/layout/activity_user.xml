@@ -1,26 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:padding="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.UserActivity">
 
-    <!-- Filme 1 -->
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="20dp">
+        android:padding="16dp">
 
         <ImageView
+            android:id="@+id/logo"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Filme 1 -->
+        <ImageView
             android:id="@+id/movie_image_1"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/movie_image_desc"
             android:src="@drawable/movie_image_1"
-            android:contentDescription="@string/movie_image_desc" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo" />
 
         <TextView
             android:id="@+id/movie_title_1"
@@ -29,30 +39,40 @@
             android:text="Título do Filme 1"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_marginTop="8dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movie_image_1" />
 
         <TextView
             android:id="@+id/movie_description_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Descrição do Filme 1"
-            android:textSize="14sp" />
-    </LinearLayout>
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movie_title_1" />
 
-    <!-- Filme 2 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="20dp">
+        <Button
+            android:id="@+id/button_movie_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/red"
+            android:text="@string/Detalhes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movie_description_1" />
 
+        <!-- Filme 2 -->
         <ImageView
             android:id="@+id/movie_image_2"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/movie_image_desc"
             android:src="@drawable/movie_image_2"
-            android:contentDescription="@string/movie_image_desc" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_movie_1" />
 
         <TextView
             android:id="@+id/movie_title_2"
@@ -61,30 +81,40 @@
             android:text="Título do Filme 2"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_marginTop="8dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movie_image_2" />
 
         <TextView
             android:id="@+id/movie_description_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Descrição do Filme 2"
-            android:textSize="14sp" />
-    </LinearLayout>
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movie_title_2" />
 
-    <!-- Filme 3 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="20dp">
+        <Button
+            android:id="@+id/button_movie_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/red"
+            android:text="@string/Detalhes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movie_description_2" />
 
+        <!-- Filme 3 -->
         <ImageView
             android:id="@+id/movie_image_3"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/movie_image_desc"
             android:src="@drawable/movie_image_3"
-            android:contentDescription="@string/movie_image_desc" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_movie_2" />
 
         <TextView
             android:id="@+id/movie_title_3"
@@ -93,30 +123,40 @@
             android:text="Título do Filme 3"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_marginTop="8dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movie_image_3" />
 
         <TextView
             android:id="@+id/movie_description_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Descrição do Filme 3"
-            android:textSize="14sp" />
-    </LinearLayout>
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movie_title_3" />
 
-    <!-- Filme 4 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="20dp">
+        <Button
+            android:id="@+id/button_movie_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/red"
+            android:text="@string/Detalhes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movie_description_3" />
 
+        <!-- Filme 4 -->
         <ImageView
             android:id="@+id/movie_image_4"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/movie_image_desc"
             android:src="@drawable/movie_image_4"
-            android:contentDescription="@string/movie_image_desc" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_movie_3" />
 
         <TextView
             android:id="@+id/movie_title_4"
@@ -125,14 +165,19 @@
             android:text="Título do Filme 4"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_marginTop="8dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movie_image_4" />
 
         <TextView
             android:id="@+id/movie_description_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Descrição do Filme 4"
-            android:textSize="14sp" />
-    </LinearLayout>
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movie_title_4" />
 
-</LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
